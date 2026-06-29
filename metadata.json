@@ -1,0 +1,6 @@
+{
+  "name": "SentinelX",
+  "description": "AI-Powered Smart Safety Ecosystem. Protects lives with wearable sensor simulation, real-time emergency tracking, and Gemini AI-driven safety response recommendations.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
