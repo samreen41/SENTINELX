@@ -1,0 +1,12 @@
+{
+  "name": "emergency_processor",
+  "description": "Processes emergency reports for SentinelX.",
+  "type": "API",
+  "visibility": "POD",
+  "code": {
+    "$file": "code.py"
+  },
+  "permissions": {
+    "grants": []
+  }
+}
