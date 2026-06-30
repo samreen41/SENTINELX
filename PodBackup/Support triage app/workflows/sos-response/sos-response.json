@@ -1,0 +1,49 @@
+{
+  "description": "Every new emergency row triggers the notify_emergency_contacts function, which fans out alerts to each registered contact and writes audit events.",
+  "edges": [
+    {
+      "id": "e1",
+      "label": null,
+      "source": "notify",
+      "target": "end"
+    }
+  ],
+  "icon_url": null,
+  "mode": "GLOBAL",
+  "name": "sos-response",
+  "nodes": [
+    {
+      "config": {
+        "function_name": "notify_emergency_contacts",
+        "input_mapping": {
+          "emergency_id": {
+            "optional": false,
+            "type": "expression",
+            "value": "start.metadata.record_id"
+          }
+        }
+      },
+      "id": "notify",
+      "label": "Notify emergency contacts",
+      "position": null,
+      "type": "FUNCTION"
+    },
+    {
+      "config": {},
+      "id": "end",
+      "label": "Done",
+      "position": null,
+      "type": "END"
+    }
+  ],
+  "start": {
+    "config": {
+      "operations": [
+        "INSERT"
+      ],
+      "table_name": "emergencies"
+    },
+    "type": "DATASTORE_EVENT"
+  },
+  "visibility": "POD"
+}

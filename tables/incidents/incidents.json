@@ -1,0 +1,44 @@
+
+{
+  "name": "incidents",
+  "primary_key_column": "id",
+  "enable_rls": false,
+  "visibility": "POD",
+  "columns": [
+    {
+      "name": "message",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "severity",
+      "type": "ENUM",
+      "required": true,
+      "options": [
+        "Low",
+        "Medium",
+        "High",
+        "Critical"
+      ]
+    },
+    {
+      "name": "incident_type",
+      "type": "TEXT",
+      "required": true
+    },
+    {
+      "name": "location",
+      "type": "TEXT"
+    },
+    {
+      "name": "status",
+      "type": "TEXT",
+      "default": "Pending"
+    },
+    {
+      "name": "reported_at",
+      "type": "DATETIME"
+    }
+  ],
+  "config": {}
+}

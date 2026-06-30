@@ -1,0 +1,43 @@
+{
+  "description": "Scheduled tick wrapper \u2014 fires tick() once per minute (or on demand) to ingest a reading per active device.",
+  "edges": [
+    {
+      "id": "e1",
+      "label": null,
+      "source": "run_tick",
+      "target": "end"
+    }
+  ],
+  "icon_url": null,
+  "mode": "GLOBAL",
+  "name": "sentinelx-tick",
+  "nodes": [
+    {
+      "config": {
+        "function_name": "tick",
+        "input_mapping": {
+          "scenario": {
+            "type": "literal",
+            "value": "normal"
+          }
+        }
+      },
+      "id": "run_tick",
+      "label": "Tick all devices",
+      "position": null,
+      "type": "FUNCTION"
+    },
+    {
+      "config": {},
+      "id": "end",
+      "label": "Done",
+      "position": null,
+      "type": "END"
+    }
+  ],
+  "start": {
+    "config": null,
+    "type": "MANUAL"
+  },
+  "visibility": "POD"
+}

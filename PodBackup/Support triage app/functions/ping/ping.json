@@ -1,0 +1,16 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "e6da6f967152f40e63d46cbd91568d27ab7ee82ab5d9e3c793d28e9f959114f8",
+  "config": null,
+  "description": "trivial ping",
+  "icon_url": null,
+  "name": "ping",
+  "permissions": {
+    "grants": []
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}

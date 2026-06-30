@@ -1,0 +1,14 @@
+{
+  "name": "safety-agent",
+  "description": "AI agent for SentinelX that analyzes emergency reports and recommends actions.",
+  "instruction": {
+    "$file": "instruction.md"
+  },
+  "toolsets": [
+    "POD"
+  ],
+  "visibility": "POD",
+  "permissions": {
+    "grants": []
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "4e3f3eda1a38e8a57e856cbff3f87f0623e40cab2740248653010254fc7255f3",
+  "config": null,
+  "description": "Latest sensor readings with severity auto-derived from fall/sos/heart_rate.",
+  "icon_url": null,
+  "name": "list_readings",
+  "permissions": {
+    "grants": [
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "devices",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "sensor_readings",
+        "resource_type": "datastore_table"
+      }
+    ]
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}

@@ -1,0 +1,60 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "62790e620adc4f607f78bed661623bb21ecccf3537fc850ddc03f73e016c5634",
+  "config": null,
+  "description": "The single orchestration function: per-tick, generate one plausible sensor reading per active device, persist it, update the device, call the Emergency Analyst agent, and (if the AI decides emergency) open an emergency record + audited alert_event. No nested function calls \u2014 agent calls only \u2014 so it stays inside one sandbox and avoids the cold-warmup cost.",
+  "icon_url": null,
+  "name": "tick",
+  "permissions": {
+    "grants": [
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "devices",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "sensor_readings",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "emergencies",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "contacts",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "alert_events",
+        "resource_type": "datastore_table"
+      }
+    ]
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}

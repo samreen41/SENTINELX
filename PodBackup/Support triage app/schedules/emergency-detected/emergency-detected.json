@@ -1,0 +1,23 @@
+{
+  "account_id": null,
+  "agent_name": null,
+  "config": {
+    "operations": [
+      "INSERT"
+    ],
+    "table_name": "emergencies"
+  },
+  "connector_trigger_id": null,
+  "filter_instruction": null,
+  "filter_output_schema": null,
+  "is_active": true,
+  "is_internal": false,
+  "last_error": null,
+  "last_fire_status": null,
+  "last_fired_at": null,
+  "last_run_id": null,
+  "name": "emergency-detected",
+  "schedule_type": "DATASTORE",
+  "visibility": "POD",
+  "workflow_name": "sos-response"
+}

@@ -1,0 +1,51 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "800e24f969c34da234d24cdc5bbf2feb0b52142eb2ff09ceac4c0bba544859dd",
+  "config": null,
+  "description": "Look up emergency contacts for the device that triggered an emergency, simulate dispatch (SMS / email / call) by writing alert_events rows, and mark the emergency as 'notified'. Production replacement would invoke Firebase Cloud Messaging / Twilio connectors here.",
+  "icon_url": null,
+  "name": "notify_emergency_contacts",
+  "permissions": {
+    "grants": [
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "devices",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "emergencies",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "contacts",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.write",
+          "datastore.table.read"
+        ],
+        "resource_name": "alert_events",
+        "resource_type": "datastore_table"
+      }
+    ]
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}

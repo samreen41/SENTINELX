@@ -1,0 +1,16 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "25ef2583ca3adf1dc0db9646752477c4acc4b97354736df162c1eb9bcc1f18be",
+  "config": null,
+  "description": "Single-event variant of tick(): persist a sensor reading provided by the operator, run the Emergency Analyst agent, and (if needed) open an emergency. Used by the dashboard's manual-entry form and (in production) by the ESP32's HTTP POST endpoint.",
+  "icon_url": null,
+  "name": "process_reading",
+  "permissions": {
+    "grants": []
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}

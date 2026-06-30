@@ -1,0 +1,73 @@
+{
+  "agent_runtime": null,
+  "description": "SentinelX AI emergency decision engine. Analyzes each sensor reading and decides if an emergency is happening, how severe, and what should be done.",
+  "icon_url": null,
+  "input_schema": null,
+  "instruction": {
+    "$file": "instruction.md"
+  },
+  "metadata": null,
+  "name": "emergency-analyst",
+  "output_schema": {
+    "properties": {
+      "action": {
+        "description": "One sentence: the concrete next step responders should take right now (who to call, what to check, what to do).",
+        "type": "string"
+      },
+      "confidence": {
+        "description": "0-100. How confident the model is in its decision. Critical cases require high confidence.",
+        "type": "number"
+      },
+      "emergency": {
+        "description": "True if the reading represents an emergency situation requiring immediate action.",
+        "type": "boolean"
+      },
+      "reason": {
+        "description": "One sentence a caregiver could read \u2014 explain WHAT the model saw (specific sensor values) and WHY it concluded what it did. Plain English, no jargon.",
+        "type": "string"
+      },
+      "severity": {
+        "description": "How urgent the response should be. Only meaningful when emergency=true.",
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "critical"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "emergency",
+      "severity",
+      "confidence",
+      "reason",
+      "action"
+    ],
+    "type": "object"
+  },
+  "permissions": {
+    "grants": [
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "devices",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "sensor_readings",
+        "resource_type": "datastore_table"
+      }
+    ]
+  },
+  "toolsets": [
+    "POD"
+  ],
+  "visibility": "POD"
+}

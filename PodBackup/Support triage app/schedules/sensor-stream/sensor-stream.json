@@ -1,0 +1,20 @@
+{
+  "account_id": null,
+  "agent_name": null,
+  "config": {
+    "cron": "*/1 * * * *"
+  },
+  "connector_trigger_id": null,
+  "filter_instruction": null,
+  "filter_output_schema": null,
+  "is_active": true,
+  "is_internal": false,
+  "last_error": null,
+  "last_fire_status": "TRIGGERED",
+  "last_fired_at": "2026-06-30T11:02:04.749865+00:00",
+  "last_run_id": "019f1831-6d94-7002-b3a5-2312ef9f14f4",
+  "name": "sensor-stream",
+  "schedule_type": "TIME",
+  "visibility": "POD",
+  "workflow_name": "sentinelx-tick"
+}

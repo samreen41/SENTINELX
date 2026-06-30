@@ -1,0 +1,41 @@
+{
+  "code": {
+    "$file": "code.py"
+  },
+  "code_hash": "8b52486d273e1616c88b51c72fa66778eaefdd7620271f2adfa6e9692e7dd6f0",
+  "config": null,
+  "description": "Aggregate KPI rollup: emergencies by severity, recent falls/SOS, device count, last tick.",
+  "icon_url": null,
+  "name": "stats_overview",
+  "permissions": {
+    "grants": [
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "devices",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "sensor_readings",
+        "resource_type": "datastore_table"
+      },
+      {
+        "permission_ids": [
+          "datastore.record.read",
+          "datastore.table.read"
+        ],
+        "resource_name": "emergencies",
+        "resource_type": "datastore_table"
+      }
+    ]
+  },
+  "python_packages": [],
+  "type": "API",
+  "visibility": "POD"
+}
